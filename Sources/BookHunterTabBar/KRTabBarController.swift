@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 11.0, *)
 class BookHunterTabBarController: UITabBarController {
     
     @IBInspectable
@@ -281,9 +282,7 @@ class BookHunterTabBarController: UITabBarController {
     }
     
     
-}
-
-extension BookHunterTabBarController: UITabBarControllerDelegate {
+    // delegate:
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         guard
             let items = tabBar.items,
@@ -294,5 +293,6 @@ extension BookHunterTabBarController: UITabBarControllerDelegate {
         }
         didSelectIndex(sender: self.buttons[index])
     }
+    
 }
 
